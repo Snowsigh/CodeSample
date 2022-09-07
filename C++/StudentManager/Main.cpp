@@ -19,7 +19,7 @@ void run<KT>(KT _DataType, GT _DataInfoType)
 		bool isRun = true;
 		int istudenttmp = 0;
 		int itmp;
-		std::string STRname = "¿¸√ºªË¡¶";
+		std::string STRname = "Ï†ÑÏ≤¥ÏÇ≠Ï†ú";
 
 		while (isRun)
 		{
@@ -27,12 +27,12 @@ void run<KT>(KT _DataType, GT _DataInfoType)
 			if (m_KLinkedList.m_RootNode == nullptr)
 			{
 				//system("cls");
-				std::cout << "===============«–ª˝∞¸∏Æ«¡∑Œ±◊∑•===============" << std::endl;
-				std::cout << "===============∏Ó∏Ì¿« «–ª˝¿‘¥œ±Ó?===============" << std::endl;
+				std::cout << "===============ÌïôÏÉùÍ¥ÄÎ¶¨ÌîÑÎ°úÍ∑∏Îû®===============" << std::endl;
+				std::cout << "===============Î™áÎ™ÖÏùò ÌïôÏÉùÏûÖÎãàÍπå?===============" << std::endl;
 				std::cin >> istudenttmp;
 				if (std::cin.fail())
 				{
-					std::cout << "===============∞™¿Ã ¿ÃªÛ«’¥œ¥Ÿ===============" << std::endl;
+					std::cout << "===============Í∞íÏù¥ Ïù¥ÏÉÅÌï©ÎãàÎã§===============" << std::endl;
 					std::cin.clear();
 					std::cin.ignore(1024, '\n');
 
@@ -44,8 +44,8 @@ void run<KT>(KT _DataType, GT _DataInfoType)
 					m_KLinkedList.Init(istudenttmp);
 				}
 			}
-			std::cout << "===============æÓ∂≤ ¿€æ˜¿ª ø¯«œΩ ¥œ±Ó?===============" << std::endl;
-			std::cout << "===============√ﬂ∞°|1|ªË¡¶|2|√‚∑¬|3|¿˙¿Â|4|∫“∑Øø¿±‚|5|»≠∏È¡ˆøÏ±‚|6|¡æ∑·|7|===============" << std::endl;
+			std::cout << "===============Ïñ¥Îñ§ ÏûëÏóÖÏùÑ ÏõêÌïòÏã≠ÎãàÍπå?===============" << std::endl;
+			std::cout << "===============Ï∂îÍ∞Ä|1|ÏÇ≠Ï†ú|2|Ï∂úÎ†•|3|Ï†ÄÏû•|4|Î∂àÎü¨Ïò§Í∏∞|5|ÌôîÎ©¥ÏßÄÏö∞Í∏∞|6|Ï¢ÖÎ£å|7|===============" << std::endl;
 			std::cin >> itmp;
 			switch (itmp)
 			{
@@ -53,7 +53,7 @@ void run<KT>(KT _DataType, GT _DataInfoType)
 				m_KLinkedList.AddList();
 				break;
 			case 2:
-				std::cout << "===============ªË¡¶«œΩ« «–ª˝∏Ì¿ª ¿‘∑¬«ÿ¡÷ººø‰(¿¸√ºªË¡¶∏¶ ø¯«—¥Ÿ∏È '¿¸√ºªË¡¶'∏¶ ≈∏¿Ã«Œ«œΩ Ω√ø¿)===============" << std::endl;
+				std::cout << "===============ÏÇ≠Ï†úÌïòÏã§ ÌïôÏÉùÎ™ÖÏùÑ ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî(Ï†ÑÏ≤¥ÏÇ≠Ï†úÎ•º ÏõêÌïúÎã§Î©¥ 'Ï†ÑÏ≤¥ÏÇ≠Ï†ú'Î•º ÌÉÄÏù¥ÌïëÌïòÏã≠ÏãúÏò§)===============" << std::endl;
 				std::cin >> STRname;
 				m_KLinkedList.Remove(STRname);
 				break;
@@ -67,15 +67,15 @@ void run<KT>(KT _DataType, GT _DataInfoType)
 			case 5:
 
 				KT* Nodetmp;
-				std::cout << "===============∆ƒ¿œ¿ª ∫“∑Øø…¥œ¥Ÿ===============" << std::endl;
-				std::cout << "***************∏µÁ µ•¿Ã≈Õ∞° ªË¡¶µ«∞Ì ∫“∑Øø…¥œ¥Ÿ***************" << std::endl;
+				std::cout << "===============ÌååÏùºÏùÑ Î∂àÎü¨ÏòµÎãàÎã§===============" << std::endl;
+				std::cout << "***************Î™®Îì† Îç∞Ïù¥ÌÑ∞Í∞Ä ÏÇ≠Ï†úÎêòÍ≥† Î∂àÎü¨ÏòµÎãàÎã§***************" << std::endl;
 				m_KLinkedList.Remove();
 				if ((Nodetmp = m_IO.fileInput(_DataInfoType)) != nullptr)
 				{
 					m_KLinkedList.m_RootNode = Nodetmp;
 					Nodetmp = nullptr;
 					m_KLinkedList.iTotalCount = m_IO.NodeCount();
-					std::cout << "===============∫“∑Øø¬ «–ª˝ ¡§∫∏ ¿‘¥œ¥Ÿ===============" << std::endl;
+					std::cout << "===============Î∂àÎü¨Ïò® ÌïôÏÉù Ï†ïÎ≥¥ ÏûÖÎãàÎã§===============" << std::endl;
 					m_KLinkedList.Draw();
 				}
 
